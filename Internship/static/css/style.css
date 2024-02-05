@@ -1,0 +1,420 @@
+.header{
+	text-align: center;
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 0px;
+}
+
+.nav-item > a:hover {
+  color: black;
+  background-color: #2f2fa2;
+  border-radius: 0px;
+}
+.nav-link > .active {
+  color: black;
+  border-radius: 0px;
+  background-color: red;
+}
+.nav-item > a {
+  padding: 5px;
+  color: black
+}
+
+.navbarclr{
+	background-color: #f64c72;
+	border-radius: 6px;
+}
+
+.btn-secondary{
+	background-color: #242582;
+}
+
+.feedpostcontent{
+	background: linear-gradient(to top, #f64c72, white);
+	padding-bottom: 15px;
+	border-radius: 6px;
+	border: solid #2f2fa2;
+}
+
+img.feedtitleicon{
+	border-radius: 6px;
+	border: solid #2f2fa2;
+}
+
+.img{
+	padding-top: 12px;
+}
+
+.details{
+	padding-left: 12px;
+	padding-top: 12px;
+}
+
+.textdetails{
+	color: white;
+	background-color: #242582;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.feedbtn{
+	padding-top: 12px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.commonbtn{
+	color: white;
+	background-color: blue;
+	height: auto;
+	width: 30%;
+	border-radius: 6px;
+	border-color: #242582;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+
+#subBtn{
+	color: white;
+	background-color: blue;
+	height: 36px;
+	width: 30%;
+	border-radius: 6px;
+	border-color: #242582;
+}
+
+
+#companydetails{
+	margin: auto;
+	width: 70%;
+	border: 3px solid #f64c72;
+	padding: 10px;
+}
+ #backbtndiv{
+	margin: auto;
+	padding-top: 16px;
+	padding-bottom: 16px;
+ }
+
+.addpost{
+	margin: auto;
+	width: 70%;
+	border: 3px solid #f64c72;
+	padding: 10px;
+	font-weight: bold;
+}
+ .editpostlabel{
+	text-align: justify;
+	font-size: 18px;
+	color: #520367;
+ }
+ .editposttextfield{
+	width: 100%;
+ }
+
+ .markasread{
+	color: white;
+	background-color: #2f2fa2;
+	height: auto;
+	width: auto;
+	border-radius: 6px;
+	border-color: #520367;
+ }
+ .heads{
+	padding-left: 5%;
+ }
+ .marbtndiv{
+	align-items: center;
+ }
+
+ .chatdivbox{
+	margin: auto;
+	width: 80%;
+	border: 3px solid #f64c72;
+	padding: 10px;
+ }
+ .chatbackbtn{
+	padding-left: 10%;
+	padding-bottom: 2%;
+ }
+
+
+ .removenotification{
+	color: white;
+	background-color: #2f2fa2;
+ }
+
+ #searchbtn{
+	background-color: #0080ff80;
+	
+ }
+ .clearsearch{
+	background-color: #f64c7280;
+ }
+
+ .addpostlabel{
+	text-align: justify;
+	font-size: 14px;
+	color: #520367;
+ }
+
+  .login-home{
+	background-color: #88738e;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  #loginpagebox{
+	background-color: #ffffff;
+	width: 500px;
+	height: 600px;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
+	text-align: justify;
+	padding-left: 50px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+  }
+  #loginpagebox img {
+	width: 200px;
+	height: 60px;
+	position: relative;
+	margin-left: 100px;
+	margin-right: 100px;
+	}
+  #loginsubBtn{
+	background-color: blue;
+	color: #ffffff;
+	width: 400px;
+	height: 35px;
+	border-color: #242582;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	}
+  #createNewAccBtn {
+	background-color: #ffffff;
+	color: blue;
+	width: 400px;
+	height: 35px;
+	border-color: #242582;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+}
+  #loginusername{
+	width: 400px;
+	height: 40px;
+	background-color: #f1e9ef;
+	border: none;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+}
+  #loginpword {
+	width: 400px;
+	height: 40px;
+	background-color: #f1e9ef;
+	border: none;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+}
+
+.acctype-home{
+	background-color: #88738e;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #acctypebackBtn{
+	background-color: #ffffff;
+	color: blue;
+	width: 100px;
+	height: 30px;
+	border-color: #242582;
+	margin-left: 350px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+  } 
+  #role {
+	background-color: #f1e9ef;
+	color:black;
+	width: 130px;
+	height: 30px;
+	border-color: black;
+	font-size: large;
+  } 
+  :root{
+	--primary-color:#242582;
+  }
+  #selectbox {
+	background-color:#ffffff;
+	width: 580px;
+	height: 500px;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
+	text-align: justify;
+	padding-left: 90px;
+	font-weight: bold;
+	font-size: large;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+  }
+  #selectbox h3{
+	justify-content: center; 
+  }
+  .radio-title-group{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 60px;
+  }
+
+  .input-container{
+	position: relative;
+	justify-content: left;
+	height: 10rem;
+	width: 10rem;
+	margin: 1rem;
+  }
+
+  .input-container input{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	margin: 100%;
+	margin: 0;
+	cursor: pointer;
+	z-index: 2;
+	opacity: 0;
+  }
+
+  .input-container .radio-tile{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	border: 2px solid var(--primary-color);
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+	transition: all 300ms ease;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+  }
+
+  .input-container ion-icon{
+	color: var(--primary-color);
+	font: size 3rem;
+  }
+
+  .input-container label{
+	color: var(--primary-color);
+	font-size: 0.80rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+  }
+
+  input:checked+ .radio-tile{
+	background-color: var(--primary-color);
+	box-shadow: 0 0 12px var(--primary-color);
+  }
+
+  input:hover+ .radio-tile{
+	box-shadow: 0 0 12px var(--primary-color);
+  }
+  input:checked+ .radio-tile ion-icon,
+  input:checked+.radio-tile label{
+	color: white;
+  }
+ 
+  .createacc-home{
+	background-color: #88738e;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  #createaccbox{
+	background-color: #ffffff;
+	width: 600px;
+	height: 1200px;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
+	text-align: justify;
+	padding-left: 50px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+  }
+  #createaccbox img {
+	width: 200px;
+	height: 60px;
+	position: relative;
+	margin-left: 130px;
+	margin-right: 100px;
+  }
+		
+ 
+		
+  #createacc-subBtn{
+	background-color: blue;
+	color: #ffffff;
+	width: 100px;
+	height: 30px;
+	border-color: #242582;
+	border-radius: 6px;
+	margin-left: 200px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+  }
+  #createacc-logBtn{
+	background-color: #ffffff;
+	color: blue;
+	width: 140px;
+	height: 30px;
+	margin-left: 180px;
+	border-color: #242582;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
+  }   
+
+   
+   
+

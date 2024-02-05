@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Posts</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  	<link href="{% static 'css/style.css' %} " rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'images/webicon.png' %}" />
+</head>
+<body style="background-color: #88738E;">
+	
+		<div class="container p-3" style="background-color: #ffffff;">
+
+			<!-- HEADER DIV -->
+			<div class="row header">
+				<div class="col-3 col-sm-3">
+				<img src="{% static 'images/WorkplaceIcon.png' %}" alt="Company Logo" style=" height: 64px; width: auto;" class="companyLogo">
+				</div>
+				<div class="col-7 col-sm-7">
+				</div>
+				<div class="col-2 col-sm-2">
+                
+				<img src="{{comdb.profilepic.url}}" alt="User Icon" style="width: 34px; height: 34px;" class="usericon rounded-pill "><br>{{comdb.companyname}}<br><a href="{% url 'logout' %}">Log out</a>
+				</div>
+			</div>
+			<br>
+			<div class="row sticky">
+			  <ul class="nav nav-pills nav-justified navbarclr">
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'addpost' comdb.comid %}"> <img src="{% static 'images/icon/addpost.png' %}"  alt="Add Posts" style="width: 34px; height: 34px;" class="btnicon"> </a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'commsg' comdb.comid %}"><img src="{% static 'images/icon/msgwhite.png' %}" alt="Messages" style="width: 34px; height: 34px;" class="btnicon"></a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link" href="{% url 'ComNotifications' comdb.comid %}"><img src="{% static 'images/icon/notificationwhite.png' %}" alt="Notifications" style="width: 34px; height: 34px;" class="btnicon"></a>
+			    </li>
+			    <li class="nav-item">
+			      <a class="nav-link active" href="{% url 'mypost' comdb.comid %}"><img src="{% static 'images/icon/mypost.png' %}" alt="My Posts" style="width: 34px; height: 34px;" class="btnicon"></a>
+			    </li>
+			  </ul>
+			</div>
+			<div>
+				<style>
+					h5{
+						color: red;
+					}
+				</style>
+				{% for message in messages %}
+				<h5>{{message}}</h5>
+				{% endfor %}
+			</div>
+
+
+            
+			<hr style="color:#242582; height:3px;">
+
+            
+			{% for i in flyers %}
+
+			<div class="row" id="myposts">
+				
+				<div class="row">
+					<div class="col-1 col-sm-1"></div>
+					<div class="col-10 col-sm-10" align="center">
+						<div class="feedposttitle" align="left">
+							
+							<h3><img src="{{i.company.profilepic.url}}" style="width: 36px; height: 36px;" class="feedtitleicon"> {{i.company.companyname}} created a vacancy on  {{i.jobpost}} in {{i.jobfield}}. </h3>
+							<small>{{i.updatetimestamp}}</small>
+						</div>
+					</div>
+					<div class="col-1 col-sm-1"></div>
+				</div>
+
+				<div class="row">
+					<div class="col-1 col-sm-1"></div>
+					<div class="col-10 col-sm-10 feedpostcontent" >
+						<br>
+						<div class="img" style="float: left; width: 50%">
+							<img src="{{i.flyerimage.url}}" style="width: 100%; height: auto;">
+						</div>
+						<div class="details"  style="float: left; width: 50%">
+							<div class="textdetails">
+								Field : {{i.jobfield}}
+							</div><br>
+							<div class="textdetails">
+								Post : {{i.jobpost}}
+							</div><br>
+							<div class="textdetails">
+								Salary : {{i.salary}}
+							</div><br>
+							<div class="textdetails">
+								Location : {{i.location}}
+							</div><br><br>
+							<div class="feedbtn" align="center">
+								<a href="{% url 'editpost' comdb.comid i.flyerid %}"> <button class="commonbtn">Edit</button> </a> 
+								<a href="{% url 'deletepost' comdb.comid i.flyerid %}"> <button class="commonbtn">Delete</button> </a>
+								
+
+
+							</div>
+						</div>
+					</div>
+					<div class="col-1 col-sm-1"></div>
+				</div>
+	
+			</div>
+			<hr style="color:#242582; height:3px;">
+
+			{% endfor %}
+			<hr style="color:#242582; height:3px;">
+
+
+
+
+
+
+
+
+		</div>
+		
+	
+
+</body>
+</html>

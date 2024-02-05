@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Edit My Posts</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+          <link href="{% static 'css/style.css' %} " rel="stylesheet">
+          <link rel="shortcut icon" href="{% static 'images/webicon.png' %}" />
+
+    </head>
+<body style="background-color: #88738E;">
+
+    <div class="container p-3" style="background-color: #ffffff;">
+
+        <!-- HEADER DIV -->
+        <div class="row header">
+            <div class="col-3 col-sm-3">
+            <img src="{% static 'images/WorkplaceIcon.png' %}" alt="Company Logo" style=" height: 64px; width: auto;" class="companyLogo">
+            </div>
+            <div class="col-7 col-sm-7">
+            </div>
+            <div class="col-2 col-sm-2">
+            
+            <img src="{{comdb.profilepic.url}}" alt="User Icon" style="width: 34px; height: 34px;" class="usericon rounded-pill "><br>{{comdb.companyname}}<br><a href="{% url 'logout' %}">Log out</a>
+            </div>
+        </div>
+        <br>
+        <div>
+            <style>
+                h5{
+                    color: red;
+                }
+            </style>
+            {% for message in messages %}
+            <h5>{{message}}</h5>
+            {% endfor %}
+        </div>
+
+        
+        <hr style="color:#242582; height:3px;">
+
+        <div class="addpost">
+            
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                  <label for="jobfield" class="editpostlabel">Job Field:</label><br>
+                  <input type="text" id="jobfield" name="jobfield" value="{{flyer.jobfield}}" class="editposttextfield"  required><br><br>
+    
+                  <label for="jobpost" class="editpostlabel">Job Post:</label><br>
+                  <input type="text" id="jobpost" name="jobpost" value="{{flyer.jobpost}}" class="editposttextfield"  required><br><br>
+    
+                  <label for="salary" class="editpostlabel">Salary:</label><br>
+                  <input type="text" id="salary" name="salary" value="{{flyer.salary}}" class="editposttextfield" required><br><br>
+    
+                  <label for="location" class="editpostlabel">Location:</label><br>
+                  <input type="text" id="location" name="location" value="{{flyer.location}}" class="editposttextfield"  required><br><br>
+    
+                  <label for="flyerimg" class="editpostlabel">Flyer Image:</label><br>
+                  Current Flyer image:<br>
+                  <img src={{flyer.flyerimage.url}} alt="" style="width: 70%; height: auto;  border: 3px solid #553d67;"><br><br>
+                  New Flyer image:<br>
+                  <input type="file" name="flyerimg" style="font-size:14px"; required><br><br><br>
+    
+                  <input type="submit" value="Submit" id="subBtn"><br><br>
+                  
+              </form>
+            
+        </div>
+        <br><br>
+        <center>
+			<div id="backbtndiv">
+            <a href="{% url 'mypost' comdb.comid %}"> <button class="commonbtn">Back to MyPosts</button> </a>
+            </div>
+        </center>
+        <hr style="color:#242582; height:3px;">
+
+
+    </div>
+    
+</body>
+</html>
